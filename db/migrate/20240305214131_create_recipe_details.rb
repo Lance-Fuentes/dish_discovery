@@ -4,7 +4,7 @@ class CreateRecipeDetails < ActiveRecord::Migration[7.1]
       t.references :recipe, null: false, foreign_key: true
       t.integer :servings
       t.string :difficulty
-      t.string :cookTime
+      t.string :cook_time
 
       t.timestamps
     end
