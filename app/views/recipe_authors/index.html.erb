@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Recipe authors</h1>
+
+<div id="recipe_authors">
+  <% @recipe_authors.each do |recipe_author| %>
+    <%= render recipe_author %>
+    <p>
+      <%= link_to "Show this recipe author", recipe_author %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New recipe author", new_recipe_author_path %>
