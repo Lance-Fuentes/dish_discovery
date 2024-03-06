@@ -1,4 +1,36 @@
-<div class="container">
-  <h1>Recipe</h1>
-
+<div class="container-fluid bg-light py-6 my-6 mt-0">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7 col-md-12">
+                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-4 animated bounceInDown">Welcome to Dish Discovery</small>
+                <h1 class="display-1 mb-4 animated bounceInDown">Explore<span class="text-primary"><br>&nbsp;&nbsp;&nbsp;Recipe Catalogue</span> </h1>
+                <a href="<%= categories_path %>" class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 me-4 animated bounceInLeft">Categories</a>
+                <a href="<%= recipes_path %>" class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 animated bounceInLeft">Recipes</a>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <%= image_tag('hero.png', class: 'img-fluid rounded animated zoomIn') %>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- About Start -->
+<div class="container-fluid py-6">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                <%= image_tag('about.jpg', class: 'img-fluid rounded') %>
+            </div>
+            <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">About Us</small>
+                <h1 class="display-5 mb-4">Recipes Approved <br> By 200+ Executive Chefs</h1>
+                <p class="mb-4">DishDiscovery is your ultimate destination for culinary inspiration and expertise. 
+                  Our platform brings together a curated collection of recipes meticulously reviewed and approved by over 200 executive chefs. 
+                  Whether you're a seasoned chef looking for new ideas or a cooking enthusiast exploring the world of flavors, our recipes are crafted to delight your taste buds and elevate your cooking experience. 
+                  Join us on a journey of culinary discovery and create memorable dishes that reflect your passion for food."</p>
+                <a href="<%= about_path %>" class="btn btn-primary py-3 px-5 rounded-pill">About Us<i class="fas fa-arrow-right ps-2"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
