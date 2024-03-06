@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/about'
   get 'home/index'
   resources :recipe_tags
   resources :tags
@@ -18,4 +19,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root 'home#index'
+
+  get 'about', to: 'pages#about'
 end
