@@ -17,6 +17,9 @@ gem "puma", ">= 5.0"
 #FAKER
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 
+#BOOTSTRAP
+gem 'bootstrap-sass'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 

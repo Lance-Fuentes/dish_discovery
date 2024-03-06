@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   resources :recipe_tags
   resources :tags
   resources :recipe_authors
