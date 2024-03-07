@@ -8,6 +8,7 @@
         <div class="tab-class text-center">
             <div class="tab-content">
                 <div class="row g-4">
+                  <%= paginate @recipes %>
                     <% @recipes.each do |recipe| %>
                         <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
                             <div class="menu-item d-flex align-items-center">
