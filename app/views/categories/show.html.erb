@@ -1,10 +1,29 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @category %>
-
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
-
-  <%= button_to "Destroy this category", @category, method: :delete %>
+<div class="container-fluid menu py-6">
+    <div class="container">
+        <%= link_to "Back to categories", categories_path, class: "breadcrumb-item" %>
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Category</small>
+            <h1 class="display-5 mb-5">Complete List of Recipes for <%= @category.name %></h1>
+        </div>
+        
+        <div class="tab-class text-center">
+            <div class="tab-content">
+                <div class="row g-4">
+                    <% @category.recipes.each do |recipe| %>
+                        <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
+                            <div class="menu-item d-flex align-items-center">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                        <%= render recipe %>
+                                    </div>
+                                    <p class="mb-0"><%= recipe.description %></p>
+                                    <p><%= link_to "Show this recipe", recipe %></p>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
