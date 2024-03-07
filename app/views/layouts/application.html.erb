@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DishDiscovery</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>DishDiscovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag 'bootstrap.min', 'style', media: 'all' %>
@@ -13,90 +13,90 @@
   <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-  </head>
-
-  <body>
-    <!-- Navbar start -->
-    <div class="container-fluid nav-bar">
-        <div class="container">
-            <nav class="navbar navbar-light navbar-expand-lg py-4">
-                <a href="<%= root_path %>" class="navbar-brand">
-                    <h1 class="text-primary fw-bold mb-0">Dish<span class="text-dark">Discovery</span> </h1>
-                </a>
-                <!-- ERB CONDITIONAL -->
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                  <div class="navbar-nav mx-auto">
-                    <%= link_to 'Home', root_path, class: 'nav-item nav-link' + (current_page?(root_path) ? ' active' : '') %>
-                    <%= link_to 'Categories', categories_path, class: 'nav-item nav-link' + (current_page?(categories_path) ? ' active' : '') %>
-                    <%= link_to 'Recipes', recipes_path, class: 'nav-item nav-link' + (current_page?(recipes_path) ? ' active' : '') %>
-                    <%= link_to 'About', about_path, class: 'nav-item nav-link' + (current_page?(about_path) ? ' active' : '') %>
-                  </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Navbar End -->
-    <%= yield %>
-  </body>
-
-<!-- Footer Start -->
-  <div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-3 col-md-6">
-                  <div class="footer-item">
-                      <h1 class="text-primary">Dish<span class="text-dark">Discovery</span></h1>
-                      <p class="lh-lg mb-4">DishDiscovery is a culinary platform offering a curated collection of recipes approved by over 200 executive chefs, designed to inspire and elevate your cooking experience.</p>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <div class="footer-item">
-                      <h2 class="mb-4">Contact Us</h2>
-                      <div class="d-flex flex-column align-items-start">
-                          <p><i class="fa fa-map-marker-alt text-primary me-2"></i> 123 Street Ave, Winnipeg, Manitoba</p>
-                          <p><i class="fa fa-phone-alt text-primary me-2"></i> (+012) 3456 7890 123</p>
-                          <p><i class="fas fa-envelope text-primary me-2"></i> dish@discovery.com</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <div class="footer-item">
-                      <h3 class="mb-4">About Us</h3>
-                      <div class="d-flex flex-column align-items-start">
-                          <p class="lh-lg mb-4"><i class="fa fa-check text-primary me-2"></i>Renowned Recipes</p>
-                          <p class="lh-lg mb-4"><i class="fa fa-check text-primary me-2"></i>Reviewed by Executive Chefs</p>
-                          <p class="lh-lg mb-4"><i class="fa fa-check text-primary me-2"></i>Researched and validated by experts</p>
-                          <p class="lh-lg mb-4"><i class="fa fa-check text-primary me-2"></i>Nationwide acclaim</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <div class="footer-item">
-                      <h4 class="mb-4">Social Gallery</h4>
-                      <div class="row g-2">
-                          <div class="col-4">
-                                <%= image_tag('menu-01.jpg', class: 'img-fluid rounded-circle border border-primary p-2') %>
-                          </div>
-                          <div class="col-4">
-                                <%= image_tag('menu-02.jpg', class: 'img-fluid rounded-circle border border-primary p-2') %>
-                          </div>
-                          <div class="col-4">
-                                <%= image_tag('menu-03.jpg', class: 'img-fluid rounded-circle border border-primary p-2') %>
-                          </div>
-                          <div class="col-4">
-                                <%= image_tag('menu-04.jpg', class: 'img-fluid rounded-circle border border-primary p-2') %>
-                          </div>
-                          <div class="col-4">
-                                <%= image_tag('menu-05.jpg', class: 'img-fluid rounded-circle border border-primary p-2') %>
-                          </div>
-                          <div class="col-4">
-                                <%= image_tag('menu-06.jpg', class: 'img-fluid rounded-circle border border-primary p-2') %>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+</head>
+<body>
+  <!-- Navbar start -->
+  <div class="container-fluid nav-bar">
+    <div class="container">
+      <nav class="navbar navbar-light navbar-expand-lg py-4">
+        <a href="<%= root_path %>" class="navbar-brand">
+          <h1 class="text-primary fw-bold mb-0">Dish<span class="text-dark">Discovery</span> </h1>
+        </a>
+        <!-- ERB CONDITIONAL -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mx-auto">
+            <%= link_to 'Home', root_path, class: 'nav-item nav-link' + (current_page?(root_path) ? ' active' : '') %>
+            <%= link_to 'Categories', categories_path, class: 'nav-item nav-link' + (current_page?(categories_path) ? ' active' : '') %>
+            <%= link_to 'Recipes', recipes_path, class: 'nav-item nav-link' + (current_page?(recipes_path) ? ' active' : '') %>
+            <%= link_to 'About', about_path, class: 'nav-item nav-link' + (current_page?(about_path) ? ' active' : '') %>
           </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+  <%= yield %>
+
+  <!-- Footer Start -->
+  <div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h1 class="text-primary">Dish<span class="text-dark">Discovery</span></h1>
+            <p class="lh-lg mb-4">DishDiscovery is a culinary platform offering a curated collection of recipes approved by over 200 executive chefs, designed to inspire and elevate your cooking experience.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h2 class="mb-4">Contact Us</h2>
+            <div class="d-flex flex-column align-items-start">
+              <p><i class="fa fa-map-marker-alt text-primary me-2"></i> 123 Street Ave, Winnipeg, Manitoba</p>
+              <p><i class="fa fa-phone-alt text-primary me-2"></i> (+012) 3456 7890 123</p>
+              <p><i class="fas fa-envelope text-primary me-2"></i> dish@discovery.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h3 class="mb-4">About Us</h3>
+            <div class="d-flex flex-column align-items-start">
+              <p class="lh-lg mb-4"><i class="fa fa-check text-primary me-2"></i>Renowned Recipes</p>
+              <p class="lh-lg mb-4"><i class="fa fa-check text-primary me-2"></i>Reviewed by Executive Chefs</p>
+              <p class="lh-lg mb-4"><i class="fa fa-check text-primary me-2"></i>Researched and validated by experts</p>
+              <p class="lh-lg mb-4"><i class="fa fa-check text-primary me-2"></i>Nationwide acclaim</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h4 class="mb-4">Social Gallery</h4>
+            <div class="row g-2">
+              <div class="col-4">
+                <%= image_tag('menu-01.jpg', class: 'img-fluid rounded-circle border border-primary p-2', alt: 'Menu Image 01') %>
+              </div>
+              <div class="col-4">
+                <%= image_tag('menu-02.jpg', class: 'img-fluid rounded-circle border border-primary p-2', alt: 'Menu Image 02') %>
+              </div>
+              <div class="col-4">
+                <%= image_tag('menu-03.jpg', class: 'img-fluid rounded-circle border border-primary p-2', alt: 'Menu Image 03') %>
+              </div>
+              <div class="col-4">
+                <%= image_tag('menu-04.jpg', class: 'img-fluid rounded-circle border border-primary p-2', alt: 'Menu Image 04') %>
+              </div>
+              <div class="col-4">
+                <%= image_tag('menu-05.jpg', class: 'img-fluid rounded-circle border border-primary p-2', alt: 'Menu Image 05') %>
+              </div>
+              <div class="col-4">
+                <%= image_tag('menu-06.jpg', class: 'img-fluid rounded-circle border border-primary p-2', alt: 'Menu Image 06') %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
   <!-- Footer End -->
+</body>
 </html>

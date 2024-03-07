@@ -1,11 +1,18 @@
-<h1>About Us</h1>
-<p>My Dish Discovery Database:</p>
-<p>We are using two different data source to populate, one is using Faker to populate 
-    RecipeDetail's attributes, Author's name, and the Tag's name. <br>
-    The other data source is from a csv called recipes.csv which populates the rest of the data.
-    <br><br>
-    The dataset consists of information related to recipes, including categories, individual recipes 
-    with their details, ingredients, authors, and tags. <br>These datasets are interconnected through relationships 
-    to provide a comprehensive view of recipe data, enabling the categorization, composition, and attribution of recipes.
-</p>
-<%= image_tag('Database.drawio.png') %>
+<div class="container-fluid menu py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">About Us</small>
+            <h1 class="display-5 mb-5">Database Description & ERD</h1>
+        </div>
+        
+        <div class="tab-class text-center">
+            <div class="tab-content">
+                <div class="row g-4">
+                    <p>We are using two different data sources to populate. One is using Faker to populate RecipeDetail's attributes, Author's name, and the Tag's name. The other data source is from a CSV called recipes.csv, which populates the rest of the data.</p>
+                    <p>The dataset consists of information related to recipes, including categories, individual recipes with their details, ingredients, authors, and tags. These datasets are interconnected through relationships to provide a comprehensive view of recipe data, enabling the categorization, composition, and attribution of recipes.</p>
+                    <%= image_tag('Database.drawio.png', alt: 'Database ERD diagram') %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
