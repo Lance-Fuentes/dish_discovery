@@ -4,6 +4,8 @@ class RecipesController < ApplicationController
   # GET /recipes or /recipes.json
   def index
     @recipes = Recipe.page(params[:page]).per(10)
+    @recipes = @recipes.where(category_id: params[:category_id]) if params[:category_id].present?
+    @recipes = @recipes.where("name LIKE ?", "%#{params[:search]}%") if params[:search].present?
   end
 
   # GET /recipes/1 or /recipes/1.json
