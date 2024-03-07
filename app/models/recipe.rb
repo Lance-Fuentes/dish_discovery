@@ -10,4 +10,6 @@ class Recipe < ApplicationRecord
   has_many :ingredients
 
   has_one :recipe_detail
+
+  validates :name, presence: true, uniqueness: true
 end
