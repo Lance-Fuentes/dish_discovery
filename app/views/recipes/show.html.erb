@@ -1,10 +1,29 @@
-<p style="color: green"><%= notice %></p>
+<div class="container-fluid bg-light py-6 my-6 mt-0">
+    <div class="container text-center animated bounceInDown">
+        <h1 class="display-1 mb-4"><%= render @recipe %> <h4 class="text-primary">Servings: <%= @recipe.recipe_detail.servings %> per person | Cook Time: <%= @recipe.recipe_detail.cook_time %>m</h4> </h1>
+        <h5> Authors: 
+            <% @recipe.authors.each_with_index do |author, index| %>
+                <%= author.name %><% if index < @recipe.authors.size - 1 %>,<% end %>
+            <% end %>
+        </h5>
+        <div class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+        </div>
+        <p> Tags: 
+            <% @recipe.tags.each_with_index do |tag, index| %>
+                <%= tag.name %><% if index < @recipe.tags.size - 1 %>,<% end %>
+            <% end %>
+        </p>
+        <p> Ingredients: 
+            <% @recipe.ingredients.each_with_index do |ingredient, index| %>
+                <%= ingredient.name %><% if index < @recipe.tags.size - 1 %>,<% end %>
+            <% end %>
+        </p>
 
-<%= render @recipe %>
-
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+        <p class="mb-0"><%= @recipe.description %></p>
+        <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+            <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "breadcrumb-item" %>
+            <%= link_to "Back to recipes", recipes_path, class: "breadcrumb-item" %>
+        </ol>
+        <%= button_to "Destroy this recipe", @recipe, method: :delete, data: { confirm: "Are you sure?" }, class: "breadcrumb-item" %>
+    </div>
 </div>
